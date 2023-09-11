@@ -5,6 +5,7 @@ class BrandModel(models.Model):
   name = models.CharField(max_length=30)
   description = models.TextField()
   country = models.CharField(max_length=30)
+  mainGif = models.ImageField(upload_to='brands')
   def __str__(self):
     return 'Brand - ' + self.name
 
@@ -13,8 +14,7 @@ class WatchModel(models.Model):
   name = models.CharField(max_length=80)
   description = models.TextField()
   price = models.CharField(max_length=20)
-  mainPhoto = models.ImageField()
-  mainGif = models.ImageField()
+  mainPhoto = models.ImageField(upload_to='watches')
   brand = models.ForeignKey(BrandModel, on_delete=models.CASCADE)
   # charactefistics
   MECHANISM = (
