@@ -7,6 +7,7 @@ class BrandSerializer(serializers.ModelSerializer):
     fields = '__all__'
 
 class WatchSerializer(serializers.ModelSerializer):
+  brand = serializers.SlugRelatedField('name', read_only=True)
   class Meta:
     model = WatchModel
     fields = '__all__'

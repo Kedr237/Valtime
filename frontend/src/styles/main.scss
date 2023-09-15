@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Mono:regular);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500);
+
+
+@import 'CONSTS';
+
+body {
+  font: $FF-MAIN ;
+  color: $BLACK;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+
+
+
+@media (max-width: 1281px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 801px) {
+  html {
+    font-size: 12px;
+  }
+}

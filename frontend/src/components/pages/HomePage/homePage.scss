@@ -1,0 +1,197 @@
+@import '../../../styles/CONSTS.scss';
+
+.home-page {
+
+
+
+  .brands {
+    font: $FF-ACCENT;
+    display: flex;
+    gap: 6.5rem;
+    list-style: none;
+    justify-content: center;
+  }
+
+  .brands__el {
+    cursor: pointer;
+
+    &:hover .brands__underline,
+    &:active .brands__underline {
+      width: 100%;
+    }
+    .brands__underline {
+      width: 0;
+      height: 2px;
+      background: $BLACK;
+      transition: 0.3s;
+    }
+  }
+
+
+
+
+  .presentation {
+    width: 100%;
+    margin-top: 5rem;
+
+    .slick-prev::before,
+    .slick-next::before {
+      all: initial;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider-watches {
+      width: 69.4%;
+      position: relative;
+      float: left;
+
+      .slider-watches__underline {
+        width: 0;
+        height: 0.625rem;
+        background: $BLACK;
+        position: absolute;
+        margin-top: 0.6rem;
+        transition: 0.5s;
+      }
+      .slider-watches__block {
+        max-height: 37.5rem;
+        width: 100%;
+        position: relative;
+
+        .slider-watches__img {
+          width: 100%;
+        }
+        .slider-watches__name {
+          position: absolute;
+          bottom: 15%;
+          right: 10%;
+          color: #fff;
+          font-family: Montserrat, sans-serif;
+          font-size: 2.5rem;
+          opacity: 0.8;
+        }
+      }
+      .slick-slider {
+        @mixin button-nav($position) {
+          @if $position == left {
+            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.7));
+            left: 0;
+          } @else {
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7));
+            right: 0;
+          }
+          position: absolute;
+          bottom: 0;
+          width: 18%;
+          height: 100%;
+          z-index: 10;
+          transition: 0.3s;
+          opacity: 0;
+          &:hover,
+          &:active {
+            opacity: 1;
+          }
+        }
+        position: relative;
+        height: 100%;
+
+        .slick-prev {
+          @include button-nav(left);
+        }
+        .slick-next {
+          @include button-nav(right);
+        }
+      }
+    }
+
+
+
+    .some-watches {
+      width: 27%;
+      float: right;
+
+      .some-watches__underline {
+        background: $BLACK;
+        height: 1px;
+        width: 80%;
+        margin: 1rem auto 1rem;
+      }
+      .some-watches__block {
+        width: 100%;
+
+        .some-watches__limit {
+          text-align: center;
+          font: $FF-ACCENT;
+        }
+        .some-watches__slider {
+  
+          .some-watches__img {
+            display: block;
+            margin: 0.7rem auto;
+            width: 70%;
+            height: 18.75rem;
+            object-fit: contain;
+          }
+          .some-watches__name {
+            text-align: center;
+            margin-bottom: 0.25rem;
+          }
+          .some-watches__price {
+            text-align: center;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .slick-prev,
+      .slick-next {
+        $side: 3rem;
+        width: $side;
+        height: $side;
+        z-index: 10;
+        opacity: 0;
+        transition: 0.4s;
+      }
+      .slick-prev {
+        background: url(blocks/arrow-prev.svg) no-repeat;
+        background-size: contain;
+        margin-left: 1.5rem;
+      }
+      .slick-next {
+        background: url(blocks/arrow-next.svg) no-repeat;
+        background-size: contain;
+        margin-right: 1.5rem;
+      }
+      .some-watches__block:hover {
+        .slick-prev,
+        .slick-next {
+          opacity: 1;
+        }
+      }
+    }
+    @media (max-width: 1150px) {
+      .slider-watches {
+        width: 100%;
+      }
+      .some-watches {
+        width: 100%;
+        display: flex;
+        
+        .some-watches__block {
+          width: 50%;
+          margin-top: 2rem;
+        }
+        .watches__underline {
+          display: none;
+        }
+      }
+    }  
+  }
+  
+
+
+}
+
+
+

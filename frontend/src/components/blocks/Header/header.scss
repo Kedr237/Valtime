@@ -1,0 +1,60 @@
+@import '../../../styles/CONSTS.scss';
+
+.header {
+  background: $BLACK;
+  color: $WHITE;
+  height: 5.7rem;
+  margin-bottom: 3rem;
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .header__city {
+    }
+
+    .header__logo {
+      cursor: pointer;
+    }
+  
+    .header__nav {
+      display: flex;
+      gap: 5rem;
+  
+      .header__nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        cursor: pointer;
+  
+        .header__nav-icon {
+          $side: 1.8rem;
+          width: $side;
+          height: $side;
+        }
+      
+        .header__nav-text {
+        }
+  
+      }
+  
+    }
+
+  }
+
+}
+
+
+@media (max-width: 1025px) {
+  .header__city {
+    display: none;
+  }
+  .header__logo {
+    width: 150px;
+  }
+  .header__nav {
+    gap: 2.5rem!important;
+  }
+}

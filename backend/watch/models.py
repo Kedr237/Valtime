@@ -7,7 +7,7 @@ class BrandModel(models.Model):
   country = models.CharField(max_length=30)
   mainGif = models.ImageField(upload_to='brands')
   def __str__(self):
-    return 'Brand - ' + self.name
+    return self.name
 
 
 class WatchModel(models.Model):
@@ -51,4 +51,4 @@ class WatchModel(models.Model):
   # charactefistics
 
   def __str__(self):
-    return 'Watch - ' + self.name
+    return self.name
