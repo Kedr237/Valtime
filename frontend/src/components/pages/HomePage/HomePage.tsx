@@ -1,7 +1,8 @@
 import React from "react";
-import Brands from "./blocks/Brands";
+import Brands from "./Presentation/Brands";
 import './homePage.scss';
-import Presentation from "./blocks/Presentation";
+import Presentation from "./Presentation/Presentation";
+import Catalog from "./Catalog/Catalog";
 
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
     <div className="home-page wrapper">
       <Brands />
       <Presentation />
+      <Catalog />
     </div>
   );
 }

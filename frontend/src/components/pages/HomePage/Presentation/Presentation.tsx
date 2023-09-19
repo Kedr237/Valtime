@@ -8,7 +8,7 @@ import SomeWatches from "./SomeWatches";
 export default function Presentation() {
 
   return (
-    <div className="presentation">
+    <div className="presentation clearfix">
       <SliderWatches />
       <SomeWatches />
     </div>
