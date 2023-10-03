@@ -5,6 +5,12 @@
   color: $WHITE;
   height: 5.7rem;
   margin-bottom: 3rem;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 
   .header__wrapper {
     display: flex;
@@ -22,6 +28,7 @@
     .header__nav {
       display: flex;
       gap: 5rem;
+      flex-wrap: wrap;
   
       .header__nav-item {
         display: flex;
@@ -56,5 +63,18 @@
   }
   .header__nav {
     gap: 2.5rem!important;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    height: auto;
+  }
+  .header__wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .header__nav {
+    gap: 4rem!important;
   }
 }

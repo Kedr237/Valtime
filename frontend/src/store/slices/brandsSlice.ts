@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
+
 export type Brand = {
   id: number;
   name: string;
@@ -7,7 +8,7 @@ export type Brand = {
   country: string;
   mainGif: string;
 }
-interface BrandsState {
+export interface BrandsState {
   arr: Brand[];
 }
 const initialState: BrandsState = {

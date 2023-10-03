@@ -2,11 +2,6 @@
 
 .home-page {
 
-
-
-
-
-
   .clearfix::after {
     content: "";
     display: table;
@@ -20,6 +15,7 @@
     gap: 6.5rem;
     list-style: none;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .brands__el {
@@ -34,6 +30,11 @@
       height: 2px;
       background: $BLACK;
       transition: 0.3s;
+    }
+  }
+  @media (max-width: 400px) {
+    .brands {
+      gap: 2.5rem;
     }
   }
 
@@ -142,6 +143,7 @@
             width: 70%;
             height: 18.75rem;
             object-fit: contain;
+            cursor: pointer;
           }
           .some-watches__name {
             text-align: center;
@@ -215,13 +217,20 @@
       $gap: 1.25rem;
       display: flex;
       gap: $gap;
-      height: 2.6rem;
+
+      .filter__brand,
+      .filter__limit,
+      .filter__select,
+      .filter__search {
+        height: 2.6rem;
+      }
 
       .filter__select {
         grid-column: auto;
         background: $GRAY;
         position: relative;
         width: 8.8rem;
+        margin-bottom: 1.5rem;
 
         .filter__current {
           padding: 0 0.2rem;
@@ -321,6 +330,7 @@
         position: relative;
         display: flex;
         gap: $gap;
+        margin-bottom: 7.5rem;
 
         .filter__limit {
           background: $GRAY;
@@ -372,13 +382,11 @@
         }
       }
     }
-
     @media (max-width: 1150px) {
       .filter {
         display: block;
       }
       .filter__wrapper {
-        height: 2.6rem;
         margin-top: 3rem;
         flex-wrap: wrap;
         
@@ -392,12 +400,107 @@
       .filter__select {
         height: 2.6rem;
       }
-      .filter__brand {
-        margin-top: 2rem;
-      }
     }
   }
 }
 
 
 
+.products {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.products__block {
+  position: relative;
+  width: 18.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  &:hover .products__cover {
+    opacity: 1;
+    width: 105%;
+    height: 105%;
+  }
+}
+.products__backet {
+  cursor: pointer;
+  $side: 1.875rem;
+  width: $side;
+  height: $side;
+  background: url(./Catalog/backet.svg) no-repeat;
+  background-size: 100%;
+  margin-left: auto;
+  margin-bottom: 0.7rem;
+  transition: 0.3s;
+
+  &:hover {
+    background: url(./Catalog/backet-accent.svg) no-repeat;
+    background-size: 100%;
+  }
+}
+.products__img {
+  cursor: pointer;
+  height: 20rem;
+}
+.products__name {
+  margin-top: 1rem;
+}
+.products__price {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.products__cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0.7rem 0.25rem rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+@media (max-width: 1150px) {
+  .products__img {
+    height: 15rem;
+  }
+}
+@media (max-width: 500px) {
+  .products__block {
+    width: 47%;
+  }
+}
+
+
+.products__circle {
+  $side: 0.7rem;
+  width: $side;
+  height: $side;
+  background: $RED;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.7rem;
+  right: 3rem;
+  opacity: 0;
+  transition: 0.1s;
+}
+
+
+.about-us {
+  margin-top: 8rem;
+  max-width: 1100px;
+}
+.about-us__title {
+  font: $FF-ACCENT;
+}
+.abou-us__desc {
+  text-align: justify;
+  margin-top: 2rem;
+  padding-right: 1rem;
+  border-right: 1px solid $BLACK;
+}

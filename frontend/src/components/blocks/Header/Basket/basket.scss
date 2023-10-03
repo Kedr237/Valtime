@@ -1,0 +1,102 @@
+@import '../../../../styles/CONSTS.scss';
+
+.basket {
+  position: absolute;
+  top: 100%;
+  right: -29rem;
+  color: $BLACK;
+  background: $WHITE;
+  padding: 1rem 1rem 4rem 3rem;
+  width: 29rem;
+  max-width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  border: 1px solid $BLACK;
+  transform: scaleX(0);
+}
+.basket__arr {
+  float: right;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    margin-right: 0.5rem;
+  }
+}
+
+.basket__products {
+  margin-top: 3rem;
+}
+.basket__prod {
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  &:hover .basket__underline {
+    background: $RED;
+  }
+}
+.basket__cross {
+  $side: 1.5rem;
+  width: $side;
+  height: $side;
+  float: right;
+  transition: 0.2s;
+  margin-right: 1rem;
+
+  &:hover {
+    margin-right: 1.3rem;
+  }
+}
+.basket__name {
+  font: $FF-ACCENT;
+  margin-bottom: 0.5rem;
+}
+.basket__price {
+  font: $FF-MAIN;
+  margin-bottom: 0.3rem;
+}
+.basket__underline {
+  background: $BLACK;
+  height: 0.25rem;
+  width: 200px;
+  max-width: 90%;
+  transition: 0.3s;
+}
+
+.basket__form {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 320px;
+}
+.basket__label {
+  font: $FF-MAIN;
+  margin-bottom: 0.5rem;
+
+}
+.basket__input {
+  margin-bottom: 1rem;
+  background: $GRAY;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+.basket__button {
+  background: $BLACK;
+  color: $RED;
+  padding: 0.5rem 1.5rem;
+  display: block;
+  margin: 1rem auto 0;
+  transition: 0.3s;
+
+  &:hover,
+  &:active {
+    background: $RED;
+    color: $BLACK;
+  }
+}
+
+.basket-trs {
+  right: 0;
+  transform: scaleX(100%);
+}

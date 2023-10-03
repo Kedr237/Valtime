@@ -1,0 +1,57 @@
+@import '../../../styles/CONSTS.scss';
+
+.watch-page {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.watch-main {
+  display: flex;
+  gap: 17%;
+  position: relative;
+  margin-bottom: 4.3rem;
+}
+.watch-main__img {
+  width: 32%;
+  max-height: 400px;
+  object-fit: contain;
+}
+.watch-main__desc {
+
+  p {
+    font: $FF-ACCENT;
+  }
+}
+.watch-main__titile {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.1rem;
+}
+.watch-main__price {
+  margin-bottom: 2.5rem;
+}
+.watch-main__features {
+}
+.watch-main__chars {
+  margin-bottom: 0.6rem;
+}
+.watch-main__ul {
+  list-style: none;
+}
+.watch-main__li {
+  margin-bottom: 0.6rem;
+}
+
+.watch-desc {
+}
+.watch-desc__desc {
+  font: $FF-ACCENT;
+  margin-bottom: 1rem;
+}
+.watch-desc__text {
+  line-height: 160%;
+}
+
+.watch-main__basket {
+  position: relative;
+}

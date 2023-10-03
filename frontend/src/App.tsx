@@ -7,10 +7,14 @@ import Footer from './components/blocks/Footer/Footer';
 import HomePage from './components/pages/HomePage/HomePage';
 import GetBrands from './helpers/GetBrands';
 import GetWatches from './helpers/GetWatches';
+import WatchPage from './components/pages/WatchPage/WatchPage';
+import GetAboutUs from './helpers/GetAboutUs';
+import ThisTest from './ThisTest';
 
 
 export default function App() {
 
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -18,9 +22,12 @@ export default function App() {
       <div className="content">
         <GetBrands />
         <GetWatches />
+        <GetAboutUs />
+        <ThisTest />
 
         <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='watch/:id' element={<WatchPage/>} />
         </Routes>
 
 

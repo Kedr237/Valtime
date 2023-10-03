@@ -27,6 +27,7 @@ INSTALLED_APPS = [
 
     'watch.apps.WatchConfig',
     'aboutus.apps.AboutusConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [

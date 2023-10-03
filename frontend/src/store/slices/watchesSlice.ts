@@ -13,7 +13,7 @@ export type Watch = {
   size: string;
   brand: string;
 }
-interface WatchesState {
+export interface WatchesState {
   arr: Watch[];
 }
 const initialState: WatchesState = {

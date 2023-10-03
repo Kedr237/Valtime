@@ -3,6 +3,7 @@ import Brands from "./Presentation/Brands";
 import './homePage.scss';
 import Presentation from "./Presentation/Presentation";
 import Catalog from "./Catalog/Catalog";
+import AboutUs from "./Presentation/AboutUs";
 
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Brands />
       <Presentation />
       <Catalog />
+      <AboutUs />
     </div>
   );
 }

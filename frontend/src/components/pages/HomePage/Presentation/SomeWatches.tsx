@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { useAppSelector } from '../../../../store/hooks';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function SomeWatches() {
@@ -20,6 +21,11 @@ export default function SomeWatches() {
     autoplaySpeed: 5000,
     pauseOnHover: true,
   }
+
+  const navigate = useNavigate();
+  function goWatch(id: number) {
+    navigate('watch/' + String(id));
+  }
   
   return (
     <div className="some-watches">
@@ -28,7 +34,7 @@ export default function SomeWatches() {
         <Slider {...settings}>
           {watches.filter(watch => Number(watch.price.replace(/\s/g, "")) < 15_000).map(watch => 
             <div key={watch.id} className='some-watches__slider'>
-              <img className='some-watches__img' src={watch.img} alt="Часы" />
+              <img className='some-watches__img' src={watch.img} alt="Часы" onClick={() => goWatch(watch.id)} />
               <p className='some-watches__name'>{watch.name}</p>
               <p className='some-watches__price'>{watch.price}</p>
             </div>
@@ -41,7 +47,7 @@ export default function SomeWatches() {
         <Slider {...settings}>
           {watches.filter(watch => Number(watch.price.replace(/\s/g, "")) >= 15_000).map(watch => 
             <div key={watch.id} className='some-watches__slider'>
-              <img className='some-watches__img' src={watch.img} alt="Часы" />
+              <img className='some-watches__img' src={watch.img} alt="Часы" onClick={() => goWatch(watch.id)} />
               <p className='some-watches__name'>{watch.name}</p>
               <p className='some-watches__price'>{watch.price}</p>
             </div>
